@@ -59,6 +59,9 @@ export default function Chat({ socket }) {
         if (tab === "ROOM") {
             socket.emit("createMessage", message)
             setMessage("")
+            socket.emit("notTyping", {
+                username: userData.username,
+            });
         } else {
 
             console.log("THIS IS THE TAB", tab)
