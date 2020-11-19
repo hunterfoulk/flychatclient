@@ -7,6 +7,7 @@ import Footer from "./common/footer"
 
 export default function App() {
 
+  if (process.env.NODE_ENV === 'production') console.log = () => { }
 
   return (
     <UserContextProvider>
