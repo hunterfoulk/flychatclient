@@ -4,7 +4,6 @@ import { IoMdPerson } from 'react-icons/io';
 import "./chat.scss"
 import { UserContext } from "../contexts/userContext"
 import { VideoContext } from '../contexts/videoContext';
-import { set } from 'local-storage';
 import RoomMessages from "./roomMessages"
 import PrivateMessages from "./privateMessage"
 
