@@ -138,7 +138,7 @@ export default function Chat({ socket }) {
                             backgroundColor: "#f3f3f3", border: "none", borderTopLeftRadius: "3px",
                             borderTopRightRadius: "3px",
                         }}>
-                            <span>{tabs.foreignSocket.username}</span>
+                            <span>{tabs.foreignSocket.username === userData.username ? tabs.localSocket.username : tabs.foreignSocket.username}</span>
                         </div>
                     ))}
                 </div>
