@@ -168,7 +168,11 @@ export default function Room() {
 
     const init = async (roomID, videoId, username) => {
 
-        socketRef.current = io(process.env.REACT_APP_PROD_POST_URL, { path: '/socket', transports: ['websocket'] });
+        socketRef.current = io(process.env.REACT_APP_PROD_POST_URL, {
+            path: '/socket',
+            forceNew: true,
+            transports: ["polling"]
+        });
 
         if (!videoId) {
             console.log("no video ID")
