@@ -125,7 +125,6 @@ export default function Room() {
         }
     }
 
-    console.log("current player", player.current)
 
 
 
